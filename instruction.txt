@@ -3,3 +3,40 @@ A Full Stack Projerct:Spring Boot,React,Redux
 ---
 website:https://www.udemy.com/course/full-stack-project-spring-boot-20-react-redux/
 hoping can finish in 1 month D)!
+
+## Original Project Features
+
+* User registration and login
+* JWT-based authentication
+* Create, update, and delete projects
+* Each project has its own backlog
+* Create tasks within a project
+* Set task status and priority
+* Display tasks by TODO / IN_PROGRESS / DONE
+* React frontend communicates with the Spring Boot REST API
+* Users can manage only their own projects and tasks
+
+The course is approximately 25 hours long, and its curriculum clearly follows this development sequence:
+
+Project CRUD
+→ React project interface
+→ Project task backend
+→ Project task frontend
+→ Spring Security + JWT
+→ Frontend authentication and authorization
+→ Deployment
+
+## How ProjectFlow Differs
+
+ProjectFlow uses the original course project as a reference, but it will not be a direct copy:
+
+| Original Course       | ProjectFlow                           |
+| --------------------- | ------------------------------------- |
+| Java 8                | Java 21                               |
+| Spring Boot 2         | Current stable version of Spring Boot |
+| React with JavaScript | React + TypeScript + Vite             |
+| MySQL / H2            | PostgreSQL + Flyway                   |
+| Legacy Redux          | Redux Toolkit                         |
+| Single-user projects  | Project members and role-based access |
+| Manual local setup    | Docker Compose                        |
+| Basic CRUD            | Testing, API documentation, and CI    |
