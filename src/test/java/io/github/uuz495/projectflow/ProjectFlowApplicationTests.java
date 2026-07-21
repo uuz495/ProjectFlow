@@ -29,4 +29,10 @@ class ProjectFlowApplicationTests {
 					.contentType(MediaType.APPLICATION_JSON)
 			);
 	}
+
+	@Test
+	void unknownRouteReturnsNotFound() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.get("/api/unknown"))
+			.andExpect(MockMvcResultMatchers.status().isNotFound());
+	}
 }
