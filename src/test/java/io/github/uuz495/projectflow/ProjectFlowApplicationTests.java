@@ -38,6 +38,30 @@ class ProjectFlowApplicationTests {
 	}
 
 	@Test
+	void getProjectByIdReturnsOk() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.get("/api/projects/7"))
+			.andExpect(MockMvcResultMatchers.status().isOk())
+			.andExpect(MockMvcResultMatchers.content().json("""
+				{
+					"id": 7,
+					"name": "Learn ProjectFlow"
+				}
+					"""));
+	}
+
+	@Test
+	void getProjectByAnotherIdReturnsOk() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.get("/api/projects/15"))
+			.andExpect(MockMvcResultMatchers.status().isOk())
+			.andExpect(MockMvcResultMatchers.content().json("""
+				{
+					"id": 15,
+					"name": "Learn ProjectFlow"
+				}
+			"""));
+	}
+
+	@Test
 	void unknownRouteReturnsNotFound() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/api/unknown"))
 			.andExpect(MockMvcResultMatchers.status().isNotFound());
