@@ -23,7 +23,14 @@ class ProjectFlowApplicationTests {
 	void getProjectsReturnsOk() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("/api/projects"))
 			.andExpect(MockMvcResultMatchers.status().isOk())
-			.andExpect(MockMvcResultMatchers.content().json("[]"))
+			.andExpect(MockMvcResultMatchers.content().json("""
+					[
+						{
+							"id": 1,
+							"name": "Learn ProjectFlow"
+						}
+					]
+					"""))
 			.andExpect(
 				MockMvcResultMatchers.content()
 					.contentType(MediaType.APPLICATION_JSON)
